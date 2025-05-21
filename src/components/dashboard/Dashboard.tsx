@@ -4,39 +4,83 @@ import { BookOpen, CalendarCheck, MessageSquare, Trophy, Bot, Clock } from 'luci
 import { Button } from '@/components/ui/button';
 import { Progress } from '@/components/ui/progress';
 import { Badge } from '@/components/ui/badge';
-
 export function Dashboard() {
   // Mock data
-  const recentDatasets = [
-    { id: '1', name: 'Financial Data 2023', size: '2.4 MB', rows: 5280, date: '2023-04-28' },
-    { id: '2', name: 'ESG Metrics', size: '1.1 MB', rows: 3450, date: '2023-04-25' },
-    { id: '3', name: 'Venture Capital Deals', size: '4.5 MB', rows: 8900, date: '2023-04-20' },
-  ];
-
-  const recentAnalyses = [
-    { id: '1', name: 'Financial Performance Analysis', date: '2023-04-28', status: 'Completed' },
-    { id: '2', name: 'Market Comparison', date: '2023-04-25', status: 'In Progress' },
-    { id: '3', name: 'ESG Impact Study', date: '2023-04-22', status: 'Scheduled' },
-  ];
-
-  const upcomingDeadlines = [
-    { id: '1', title: 'Database Design Project', course: 'Database Systems', dueDate: '2025-05-25', status: 'Due Soon' },
-    { id: '2', title: 'Midterm Exam', course: 'Operating Systems', dueDate: '2025-05-28', status: 'Upcoming' },
-    { id: '3', title: 'Team Presentation', course: 'Software Engineering', dueDate: '2025-05-30', status: 'In Progress' },
-  ];
-
-  const recentActivity = [
-    { id: '1', type: 'forum', message: 'New reply to your post in Database Systems', time: '2 hours ago' },
-    { id: '2', type: 'achievement', message: 'Earned "Quick Learner" badge', time: '5 hours ago' },
-    { id: '3', type: 'grade', message: 'Received 95% on Algorithm Analysis Quiz', time: '1 day ago' },
-  ];
-
-  return (
-    <div className="space-y-6">
+  const recentDatasets = [{
+    id: '1',
+    name: 'Financial Data 2023',
+    size: '2.4 MB',
+    rows: 5280,
+    date: '2023-04-28'
+  }, {
+    id: '2',
+    name: 'ESG Metrics',
+    size: '1.1 MB',
+    rows: 3450,
+    date: '2023-04-25'
+  }, {
+    id: '3',
+    name: 'Venture Capital Deals',
+    size: '4.5 MB',
+    rows: 8900,
+    date: '2023-04-20'
+  }];
+  const recentAnalyses = [{
+    id: '1',
+    name: 'Financial Performance Analysis',
+    date: '2023-04-28',
+    status: 'Completed'
+  }, {
+    id: '2',
+    name: 'Market Comparison',
+    date: '2023-04-25',
+    status: 'In Progress'
+  }, {
+    id: '3',
+    name: 'ESG Impact Study',
+    date: '2023-04-22',
+    status: 'Scheduled'
+  }];
+  const upcomingDeadlines = [{
+    id: '1',
+    title: 'Database Design Project',
+    course: 'Database Systems',
+    dueDate: '2025-05-25',
+    status: 'Due Soon'
+  }, {
+    id: '2',
+    title: 'Midterm Exam',
+    course: 'Operating Systems',
+    dueDate: '2025-05-28',
+    status: 'Upcoming'
+  }, {
+    id: '3',
+    title: 'Team Presentation',
+    course: 'Software Engineering',
+    dueDate: '2025-05-30',
+    status: 'In Progress'
+  }];
+  const recentActivity = [{
+    id: '1',
+    type: 'forum',
+    message: 'New reply to your post in Database Systems',
+    time: '2 hours ago'
+  }, {
+    id: '2',
+    type: 'achievement',
+    message: 'Earned "Quick Learner" badge',
+    time: '5 hours ago'
+  }, {
+    id: '3',
+    type: 'grade',
+    message: 'Received 95% on Algorithm Analysis Quiz',
+    time: '1 day ago'
+  }];
+  return <div className="space-y-6">
       <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
         <Card className="bg-gradient-to-br from-blue-50 to-blue-100 dark:from-blue-900/50 dark:to-blue-800/50">
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle className="text-sm font-medium">Active Courses</CardTitle>
+            <CardTitle className="text-sm font-medium text-blue-600">Active Courses</CardTitle>
             <BookOpen className="h-4 w-4 text-blue-600 dark:text-blue-400" />
           </CardHeader>
           <CardContent>
@@ -87,24 +131,18 @@ export function Dashboard() {
           </CardHeader>
           <CardContent>
             <div className="space-y-4">
-              {upcomingDeadlines.map(deadline => (
-                <div key={deadline.id} className="flex items-center justify-between">
+              {upcomingDeadlines.map(deadline => <div key={deadline.id} className="flex items-center justify-between">
                   <div className="space-y-1">
                     <p className="text-sm font-medium leading-none">{deadline.title}</p>
                     <p className="text-sm text-muted-foreground">{deadline.course}</p>
                   </div>
                   <div className="flex items-center space-x-4">
                     <p className="text-sm text-muted-foreground">Due {new Date(deadline.dueDate).toLocaleDateString()}</p>
-                    <Badge variant={
-                      deadline.status === 'Due Soon' ? 'destructive' : 
-                      deadline.status === 'In Progress' ? 'default' : 
-                      'secondary'
-                    }>
+                    <Badge variant={deadline.status === 'Due Soon' ? 'destructive' : deadline.status === 'In Progress' ? 'default' : 'secondary'}>
                       {deadline.status}
                     </Badge>
                   </div>
-                </div>
-              ))}
+                </div>)}
             </div>
           </CardContent>
         </Card>
@@ -154,8 +192,7 @@ export function Dashboard() {
           </CardHeader>
           <CardContent>
             <div className="space-y-4">
-              {recentActivity.map(activity => (
-                <div key={activity.id} className="flex items-center">
+              {recentActivity.map(activity => <div key={activity.id} className="flex items-center">
                   <div className="mr-4">
                     {activity.type === 'forum' && <MessageSquare className="h-8 w-8 text-purple-500" />}
                     {activity.type === 'achievement' && <Trophy className="h-8 w-8 text-yellow-500" />}
@@ -168,8 +205,7 @@ export function Dashboard() {
                       {activity.time}
                     </div>
                   </div>
-                </div>
-              ))}
+                </div>)}
             </div>
             <Button variant="outline" className="w-full mt-4">View All Activity</Button>
           </CardContent>
@@ -211,6 +247,5 @@ export function Dashboard() {
           </CardContent>
         </Card>
       </div>
-    </div>
-  );
+    </div>;
 }
