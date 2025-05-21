@@ -25,7 +25,7 @@ const CoursesPage = () => {
         </div>
         
         <div className="bg-white rounded-lg shadow-md p-6">
-          <h2 className="text-xl font-semibold mb-2">TypeScript Essentials</h2>
+          <h2 className="text-xl font-semibold mb-2 text-gray-800">TypeScript Essentials</h2>
           <p className="text-gray-600 mb-4">Learn how to leverage TypeScript in your projects.</p>
           <div className="flex justify-between items-center">
             <span className="text-sm bg-blue-100 text-blue-800 px-3 py-1 rounded-full">5 weeks</span>
