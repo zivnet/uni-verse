@@ -12,7 +12,7 @@ const NovaPage = () => {
             </svg>
           </div>
           <div>
-            <h2 className="text-xl font-semibold mb-2">Nova</h2>
+            <h2 className="text-xl font-semibold mb-2 text-gray-800">Nova</h2>
             <p className="text-gray-600">
               Hi there! I'm Nova, your AI learning assistant. How can I help you today? 
               You can ask me questions about your courses, help you practice concepts, 
