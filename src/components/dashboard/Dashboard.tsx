@@ -134,7 +134,7 @@ export function Dashboard() {
               {upcomingDeadlines.map(deadline => <div key={deadline.id} className="flex items-center justify-between">
                   <div className="space-y-1">
                     <p className="text-sm font-medium leading-none">{deadline.title}</p>
-                    <p className="text-sm text-muted-foreground">{deadline.course}</p>
+                    <p className="text-sm text-green-600">{deadline.course}</p>
                   </div>
                   <div className="flex items-center space-x-4">
                     <p className="text-sm text-muted-foreground">Due {new Date(deadline.dueDate).toLocaleDateString()}</p>
