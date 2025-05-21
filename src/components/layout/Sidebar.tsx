@@ -1,15 +1,21 @@
-
 import React from "react";
 import { NavLink } from "react-router-dom";
 import { 
+  BookOpen, 
+  GraduationCap, 
+  Calendar, 
+  MessageSquare,
+  Home,
+  Bot,
+  Users,
+  Settings,
+  Award,
+  Search,
   BarChart, 
   Database, 
   FileText, 
-  Home, 
-  Settings, 
   Clock,
   Layers,
-  Users,
   GitBranch
 } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -32,9 +38,9 @@ export function Sidebar() {
     <SidebarComponent>
       <SidebarHeader className="p-4">
         <div className="flex items-center space-x-2">
-          <Layers className="h-6 w-6 text-datalab-blue" />
-          <span className="text-lg font-bold">DataLab</span>
-          <span className="text-xs bg-datalab-blue/20 text-datalab-blue px-1.5 py-0.5 rounded">
+          <GraduationCap className="h-6 w-6 text-primary" />
+          <span className="text-lg font-bold">UniVerse</span>
+          <span className="text-xs bg-primary/20 text-primary px-1.5 py-0.5 rounded">
             BETA
           </span>
         </div>
@@ -55,7 +61,7 @@ export function Sidebar() {
                   </NavLink>
                 </SidebarMenuButton>
               </SidebarMenuItem>
-              
+
               <SidebarMenuItem>
                 <SidebarMenuButton asChild>
                   <NavLink to="/data" className={({ isActive }) => cn(
@@ -108,29 +114,17 @@ export function Sidebar() {
         </SidebarGroup>
 
         <SidebarGroup>
-          <SidebarGroupLabel className="px-3 py-2">Administration</SidebarGroupLabel>
+          <SidebarGroupLabel className="px-3 py-2">Profile</SidebarGroupLabel>
           <SidebarGroupContent>
             <SidebarMenu>
               <SidebarMenuItem>
                 <SidebarMenuButton asChild>
-                  <NavLink to="/team" className={({ isActive }) => cn(
+                  <NavLink to="/progress" className={({ isActive }) => cn(
                     "flex items-center gap-3 px-3 py-2 rounded-md transition-colors",
                     isActive ? "bg-sidebar-accent text-sidebar-accent-foreground" : "transparent hover:bg-sidebar-accent/50"
                   )}>
-                    <Users className="h-5 w-5" />
-                    <span>Team</span>
-                  </NavLink>
-                </SidebarMenuButton>
-              </SidebarMenuItem>
-
-              <SidebarMenuItem>
-                <SidebarMenuButton asChild>
-                  <NavLink to="/version-control" className={({ isActive }) => cn(
-                    "flex items-center gap-3 px-3 py-2 rounded-md transition-colors",
-                    isActive ? "bg-sidebar-accent text-sidebar-accent-foreground" : "transparent hover:bg-sidebar-accent/50"
-                  )}>
-                    <GitBranch className="h-5 w-5" />
-                    <span>Version Control</span>
+                    <Award className="h-5 w-5" />
+                    <span>Progress & XP</span>
                   </NavLink>
                 </SidebarMenuButton>
               </SidebarMenuItem>
@@ -149,11 +143,78 @@ export function Sidebar() {
             </SidebarMenu>
           </SidebarGroupContent>
         </SidebarGroup>
+
+        <SidebarGroup>
+          <SidebarGroupLabel className="px-3 py-2">Education</SidebarGroupLabel>
+          <SidebarGroupContent>
+            <SidebarMenu>
+              <SidebarMenuItem>
+                <SidebarMenuButton asChild>
+                  <NavLink to="/courses" className={({ isActive }) => cn(
+                    "flex items-center gap-3 px-3 py-2 rounded-md transition-colors",
+                    isActive ? "bg-sidebar-accent text-sidebar-accent-foreground" : "transparent hover:bg-sidebar-accent/50"
+                  )}>
+                    <BookOpen className="h-5 w-5" />
+                    <span>My Courses</span>
+                  </NavLink>
+                </SidebarMenuButton>
+              </SidebarMenuItem>
+
+              <SidebarMenuItem>
+                <SidebarMenuButton asChild>
+                  <NavLink to="/calendar" className={({ isActive }) => cn(
+                    "flex items-center gap-3 px-3 py-2 rounded-md transition-colors",
+                    isActive ? "bg-sidebar-accent text-sidebar-accent-foreground" : "transparent hover:bg-sidebar-accent/50"
+                  )}>
+                    <Calendar className="h-5 w-5" />
+                    <span>Calendar</span>
+                  </NavLink>
+                </SidebarMenuButton>
+              </SidebarMenuItem>
+
+              <SidebarMenuItem>
+                <SidebarMenuButton asChild>
+                  <NavLink to="/forum" className={({ isActive }) => cn(
+                    "flex items-center gap-3 px-3 py-2 rounded-md transition-colors",
+                    isActive ? "bg-sidebar-accent text-sidebar-accent-foreground" : "transparent hover:bg-sidebar-accent/50"
+                  )}>
+                    <MessageSquare className="h-5 w-5" />
+                    <span>Forum</span>
+                  </NavLink>
+                </SidebarMenuButton>
+              </SidebarMenuItem>
+
+              <SidebarMenuItem>
+                <SidebarMenuButton asChild>
+                  <NavLink to="/explore" className={({ isActive }) => cn(
+                    "flex items-center gap-3 px-3 py-2 rounded-md transition-colors",
+                    isActive ? "bg-sidebar-accent text-sidebar-accent-foreground" : "transparent hover:bg-sidebar-accent/50"
+                  )}>
+                    <Search className="h-5 w-5" />
+                    <span>Explore</span>
+                  </NavLink>
+                </SidebarMenuButton>
+              </SidebarMenuItem>
+
+              <SidebarMenuItem>
+                <SidebarMenuButton asChild>
+                  <NavLink to="/nova" className={({ isActive }) => cn(
+                    "flex items-center gap-3 px-3 py-2 rounded-md transition-colors",
+                    isActive ? "bg-sidebar-accent text-sidebar-accent-foreground" : "transparent hover:bg-sidebar-accent/50"
+                  )}>
+                    <Bot className="h-5 w-5" />
+                    <span>Nova AI</span>
+                  </NavLink>
+                </SidebarMenuButton>
+              </SidebarMenuItem>
+            </SidebarMenu>
+          </SidebarGroupContent>
+        </SidebarGroup>
       </SidebarContent>
 
       <SidebarFooter className="p-4">
         <div className="text-xs text-muted-foreground">
-          DataLab Assistant v0.1
+          UniVerse v1.0.0
         </div>
       </SidebarFooter>
     </SidebarComponent>

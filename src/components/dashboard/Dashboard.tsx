@@ -1,8 +1,9 @@
-
 import React from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { FileText, Database, BarChart2, Clock, AlertTriangle } from 'lucide-react';
+import { BookOpen, CalendarCheck, MessageSquare, Trophy, Bot, Clock } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { Progress } from '@/components/ui/progress';
+import { Badge } from '@/components/ui/badge';
 
 export function Dashboard() {
   // Mock data
@@ -18,162 +19,194 @@ export function Dashboard() {
     { id: '3', name: 'ESG Impact Study', date: '2023-04-22', status: 'Scheduled' },
   ];
 
+  const upcomingDeadlines = [
+    { id: '1', title: 'Database Design Project', course: 'Database Systems', dueDate: '2025-05-25', status: 'Due Soon' },
+    { id: '2', title: 'Midterm Exam', course: 'Operating Systems', dueDate: '2025-05-28', status: 'Upcoming' },
+    { id: '3', title: 'Team Presentation', course: 'Software Engineering', dueDate: '2025-05-30', status: 'In Progress' },
+  ];
+
+  const recentActivity = [
+    { id: '1', type: 'forum', message: 'New reply to your post in Database Systems', time: '2 hours ago' },
+    { id: '2', type: 'achievement', message: 'Earned "Quick Learner" badge', time: '5 hours ago' },
+    { id: '3', type: 'grade', message: 'Received 95% on Algorithm Analysis Quiz', time: '1 day ago' },
+  ];
+
   return (
     <div className="space-y-6">
       <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
-        <Card className="card-gradient">
+        <Card className="bg-gradient-to-br from-blue-50 to-blue-100 dark:from-blue-900/50 dark:to-blue-800/50">
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle className="text-sm font-medium">Total Datasets</CardTitle>
-            <Database className="h-4 w-4 text-muted-foreground" />
+            <CardTitle className="text-sm font-medium">Active Courses</CardTitle>
+            <BookOpen className="h-4 w-4 text-blue-600 dark:text-blue-400" />
           </CardHeader>
           <CardContent>
-            <div className="text-2xl font-bold">12</div>
-            <p className="text-xs text-muted-foreground">+2 since last month</p>
+            <div className="text-2xl font-bold text-blue-600 dark:text-blue-400">6</div>
+            <p className="text-xs text-blue-600/80 dark:text-blue-400/80">Spring Semester 2025</p>
           </CardContent>
         </Card>
-        
-        <Card className="card-gradient">
+
+        <Card className="bg-gradient-to-br from-green-50 to-green-100 dark:from-green-900/50 dark:to-green-800/50">
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle className="text-sm font-medium">Active Notebooks</CardTitle>
-            <FileText className="h-4 w-4 text-muted-foreground" />
+            <CardTitle className="text-sm font-medium">Completion Rate</CardTitle>
+            <Trophy className="h-4 w-4 text-green-600 dark:text-green-400" />
           </CardHeader>
           <CardContent>
-            <div className="text-2xl font-bold">8</div>
-            <p className="text-xs text-muted-foreground">+3 since last month</p>
+            <div className="text-2xl font-bold text-green-600 dark:text-green-400">85%</div>
+            <p className="text-xs text-green-600/80 dark:text-green-400/80">+5% from last week</p>
           </CardContent>
         </Card>
-        
-        <Card className="card-gradient">
+
+        <Card className="bg-gradient-to-br from-purple-50 to-purple-100 dark:from-purple-900/50 dark:to-purple-800/50">
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle className="text-sm font-medium">Visualizations</CardTitle>
-            <BarChart2 className="h-4 w-4 text-muted-foreground" />
+            <CardTitle className="text-sm font-medium">Forum Activity</CardTitle>
+            <MessageSquare className="h-4 w-4 text-purple-600 dark:text-purple-400" />
           </CardHeader>
           <CardContent>
-            <div className="text-2xl font-bold">24</div>
-            <p className="text-xs text-muted-foreground">+5 since last month</p>
+            <div className="text-2xl font-bold text-purple-600 dark:text-purple-400">28</div>
+            <p className="text-xs text-purple-600/80 dark:text-purple-400/80">Active discussions</p>
           </CardContent>
         </Card>
-        
-        <Card className="card-gradient">
+
+        <Card className="bg-gradient-to-br from-orange-50 to-orange-100 dark:from-orange-900/50 dark:to-orange-800/50">
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle className="text-sm font-medium">Scheduled Jobs</CardTitle>
-            <Clock className="h-4 w-4 text-muted-foreground" />
+            <CardTitle className="text-sm font-medium">AI Assistant Usage</CardTitle>
+            <Bot className="h-4 w-4 text-orange-600 dark:text-orange-400" />
           </CardHeader>
           <CardContent>
-            <div className="text-2xl font-bold">4</div>
-            <p className="text-xs text-muted-foreground">+1 since last month</p>
+            <div className="text-2xl font-bold text-orange-600 dark:text-orange-400">45</div>
+            <p className="text-xs text-orange-600/80 dark:text-orange-400/80">Questions answered today</p>
           </CardContent>
         </Card>
       </div>
-      
+
       <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-        <Card className="md:col-span-2 card-gradient">
+        <Card className="col-span-2">
           <CardHeader>
-            <CardTitle>Recent Datasets</CardTitle>
-            <CardDescription>Recently added or modified datasets</CardDescription>
+            <CardTitle>Upcoming Deadlines</CardTitle>
+            <CardDescription>Tasks and assignments due soon</CardDescription>
           </CardHeader>
           <CardContent>
-            <div className="space-y-5">
-              {recentDatasets.map(dataset => (
-                <div key={dataset.id} className="flex items-center">
-                  <div className="space-y-1 flex-1">
-                    <p className="text-sm font-medium leading-none">{dataset.name}</p>
-                    <p className="text-sm text-muted-foreground">
-                      {dataset.rows.toLocaleString()} rows • {dataset.size}
-                    </p>
+            <div className="space-y-4">
+              {upcomingDeadlines.map(deadline => (
+                <div key={deadline.id} className="flex items-center justify-between">
+                  <div className="space-y-1">
+                    <p className="text-sm font-medium leading-none">{deadline.title}</p>
+                    <p className="text-sm text-muted-foreground">{deadline.course}</p>
                   </div>
-                  <div className="text-sm text-muted-foreground">
-                    {new Date(dataset.date).toLocaleDateString()}
+                  <div className="flex items-center space-x-4">
+                    <p className="text-sm text-muted-foreground">Due {new Date(deadline.dueDate).toLocaleDateString()}</p>
+                    <Badge variant={
+                      deadline.status === 'Due Soon' ? 'destructive' : 
+                      deadline.status === 'In Progress' ? 'default' : 
+                      'secondary'
+                    }>
+                      {deadline.status}
+                    </Badge>
                   </div>
                 </div>
               ))}
             </div>
-            
-            <div className="mt-6">
-              <Button variant="outline" className="w-full">View All Datasets</Button>
-            </div>
           </CardContent>
         </Card>
-        
-        <Card className="card-gradient">
+
+        <Card>
           <CardHeader>
-            <CardTitle>System Status</CardTitle>
-            <CardDescription>Current system metrics</CardDescription>
+            <CardTitle>Your Progress</CardTitle>
+            <CardDescription>Current semester progress</CardDescription>
           </CardHeader>
           <CardContent>
             <div className="space-y-4">
               <div className="space-y-2">
-                <div className="flex items-center justify-between">
-                  <p className="text-sm">Storage Usage</p>
-                  <p className="text-sm">45%</p>
+                <div className="flex items-center justify-between text-sm">
+                  <span>XP Level 12</span>
+                  <span>2400/3000</span>
                 </div>
-                <div className="h-2 w-full bg-secondary rounded-full overflow-hidden">
-                  <div className="h-full bg-datalab-blue rounded-full" style={{ width: '45%' }}></div>
-                </div>
+                <Progress value={80} className="h-2" />
               </div>
-              
+
               <div className="space-y-2">
-                <div className="flex items-center justify-between">
-                  <p className="text-sm">API Quota</p>
-                  <p className="text-sm">72%</p>
+                <div className="flex items-center justify-between text-sm">
+                  <span>Course Completion</span>
+                  <span>85%</span>
                 </div>
-                <div className="h-2 w-full bg-secondary rounded-full overflow-hidden">
-                  <div className="h-full bg-datalab-yellow rounded-full" style={{ width: '72%' }}></div>
-                </div>
+                <Progress value={85} className="h-2" />
               </div>
-              
-              <div className="pt-2">
-                <div className="rounded-md bg-datalab-orange/20 p-3">
-                  <div className="flex items-center">
-                    <AlertTriangle className="h-4 w-4 text-datalab-orange" />
-                    <span className="ml-2 text-sm font-medium text-datalab-orange">API quota nearing limit</span>
-                  </div>
-                  <p className="text-xs text-muted-foreground mt-1">
-                    72% of monthly API quota used. Reset in 8 days.
-                  </p>
+
+              <div className="space-y-2">
+                <div className="flex items-center justify-between text-sm">
+                  <span>Assignment Score</span>
+                  <span>92%</span>
                 </div>
+                <Progress value={92} className="h-2" />
               </div>
+
+              <Button variant="outline" className="w-full mt-4">View Detailed Progress</Button>
             </div>
           </CardContent>
         </Card>
       </div>
-      
-      <div className="grid gap-4 grid-cols-1">
-        <Card className="card-gradient">
+
+      <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+        <Card className="md:col-span-2">
           <CardHeader>
-            <CardTitle>Recent Analyses</CardTitle>
-            <CardDescription>Your recent analysis notebooks and queries</CardDescription>
+            <CardTitle>Recent Activity</CardTitle>
+            <CardDescription>Your latest interactions and achievements</CardDescription>
           </CardHeader>
           <CardContent>
-            <div className="space-y-5">
-              {recentAnalyses.map(analysis => (
-                <div key={analysis.id} className="flex items-center">
-                  <div className="flex-1 space-y-1">
-                    <div className="flex items-center">
-                      <FileText className="h-4 w-4 mr-2 text-muted-foreground" />
-                      <p className="text-sm font-medium leading-none">{analysis.name}</p>
-                    </div>
-                    <p className="text-sm text-muted-foreground">
-                      Last modified on {new Date(analysis.date).toLocaleDateString()}
-                    </p>
+            <div className="space-y-4">
+              {recentActivity.map(activity => (
+                <div key={activity.id} className="flex items-center">
+                  <div className="mr-4">
+                    {activity.type === 'forum' && <MessageSquare className="h-8 w-8 text-purple-500" />}
+                    {activity.type === 'achievement' && <Trophy className="h-8 w-8 text-yellow-500" />}
+                    {activity.type === 'grade' && <BookOpen className="h-8 w-8 text-green-500" />}
                   </div>
-                  <div className="flex items-center">
-                    <div 
-                      className={`w-2 h-2 rounded-full mr-2 ${
-                        analysis.status === 'Completed' ? 'bg-datalab-green' : 
-                        analysis.status === 'In Progress' ? 'bg-datalab-blue' : 
-                        'bg-datalab-yellow'
-                      }`}
-                    />
-                    <span className="text-sm">{analysis.status}</span>
+                  <div className="flex-1 space-y-1">
+                    <p className="text-sm font-medium">{activity.message}</p>
+                    <div className="flex items-center text-xs text-muted-foreground">
+                      <Clock className="mr-1 h-3 w-3" />
+                      {activity.time}
+                    </div>
                   </div>
                 </div>
               ))}
             </div>
-            
-            <div className="mt-6 flex justify-end space-x-2">
-              <Button variant="outline">View All</Button>
-              <Button>Create New Analysis</Button>
+            <Button variant="outline" className="w-full mt-4">View All Activity</Button>
+          </CardContent>
+        </Card>
+
+        <Card>
+          <CardHeader>
+            <CardTitle>Weekly Schedule</CardTitle>
+            <CardDescription>Upcoming classes</CardDescription>
+          </CardHeader>
+          <CardContent>
+            <div className="space-y-4">
+              <div className="flex items-center space-x-4">
+                <CalendarCheck className="h-4 w-4 text-muted-foreground" />
+                <div className="flex-1 space-y-1">
+                  <p className="text-sm font-medium">Database Systems</p>
+                  <p className="text-xs text-muted-foreground">Today, 2:00 PM</p>
+                </div>
+                <Badge>Online</Badge>
+              </div>
+              <div className="flex items-center space-x-4">
+                <CalendarCheck className="h-4 w-4 text-muted-foreground" />
+                <div className="flex-1 space-y-1">
+                  <p className="text-sm font-medium">Operating Systems</p>
+                  <p className="text-xs text-muted-foreground">Today, 4:00 PM</p>
+                </div>
+                <Badge variant="outline">Room 302</Badge>
+              </div>
+              <div className="flex items-center space-x-4">
+                <CalendarCheck className="h-4 w-4 text-muted-foreground" />
+                <div className="flex-1 space-y-1">
+                  <p className="text-sm font-medium">Software Engineering</p>
+                  <p className="text-xs text-muted-foreground">Tomorrow, 10:00 AM</p>
+                </div>
+                <Badge>Online</Badge>
+              </div>
+              <Button variant="outline" className="w-full mt-2">View Full Schedule</Button>
             </div>
           </CardContent>
         </Card>
