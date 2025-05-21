@@ -1,3 +1,4 @@
+
 import React from "react";
 import { NavLink } from "react-router-dom";
 import { 
@@ -7,16 +8,9 @@ import {
   MessageSquare,
   Home,
   Bot,
-  Users,
-  Settings,
-  Award,
   Search,
-  BarChart, 
-  Database, 
-  FileText, 
-  Clock,
-  Layers,
-  GitBranch
+  Settings,
+  Award
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 
@@ -58,85 +52,6 @@ export function Sidebar() {
                   )}>
                     <Home className="h-5 w-5" />
                     <span>Dashboard</span>
-                  </NavLink>
-                </SidebarMenuButton>
-              </SidebarMenuItem>
-
-              <SidebarMenuItem>
-                <SidebarMenuButton asChild>
-                  <NavLink to="/data" className={({ isActive }) => cn(
-                    "flex items-center gap-3 px-3 py-2 rounded-md transition-colors",
-                    isActive ? "bg-sidebar-accent text-sidebar-accent-foreground" : "transparent hover:bg-sidebar-accent/50"
-                  )}>
-                    <Database className="h-5 w-5" />
-                    <span>Data</span>
-                  </NavLink>
-                </SidebarMenuButton>
-              </SidebarMenuItem>
-
-              <SidebarMenuItem>
-                <SidebarMenuButton asChild>
-                  <NavLink to="/notebook" className={({ isActive }) => cn(
-                    "flex items-center gap-3 px-3 py-2 rounded-md transition-colors",
-                    isActive ? "bg-sidebar-accent text-sidebar-accent-foreground" : "transparent hover:bg-sidebar-accent/50"
-                  )}>
-                    <FileText className="h-5 w-5" />
-                    <span>Notebooks</span>
-                  </NavLink>
-                </SidebarMenuButton>
-              </SidebarMenuItem>
-
-              <SidebarMenuItem>
-                <SidebarMenuButton asChild>
-                  <NavLink to="/visualization" className={({ isActive }) => cn(
-                    "flex items-center gap-3 px-3 py-2 rounded-md transition-colors",
-                    isActive ? "bg-sidebar-accent text-sidebar-accent-foreground" : "transparent hover:bg-sidebar-accent/50"
-                  )}>
-                    <BarChart className="h-5 w-5" />
-                    <span>Visualization</span>
-                  </NavLink>
-                </SidebarMenuButton>
-              </SidebarMenuItem>
-
-              <SidebarMenuItem>
-                <SidebarMenuButton asChild>
-                  <NavLink to="/scheduler" className={({ isActive }) => cn(
-                    "flex items-center gap-3 px-3 py-2 rounded-md transition-colors",
-                    isActive ? "bg-sidebar-accent text-sidebar-accent-foreground" : "transparent hover:bg-sidebar-accent/50"
-                  )}>
-                    <Clock className="h-5 w-5" />
-                    <span>Scheduler</span>
-                  </NavLink>
-                </SidebarMenuButton>
-              </SidebarMenuItem>
-            </SidebarMenu>
-          </SidebarGroupContent>
-        </SidebarGroup>
-
-        <SidebarGroup>
-          <SidebarGroupLabel className="px-3 py-2">Profile</SidebarGroupLabel>
-          <SidebarGroupContent>
-            <SidebarMenu>
-              <SidebarMenuItem>
-                <SidebarMenuButton asChild>
-                  <NavLink to="/progress" className={({ isActive }) => cn(
-                    "flex items-center gap-3 px-3 py-2 rounded-md transition-colors",
-                    isActive ? "bg-sidebar-accent text-sidebar-accent-foreground" : "transparent hover:bg-sidebar-accent/50"
-                  )}>
-                    <Award className="h-5 w-5" />
-                    <span>Progress & XP</span>
-                  </NavLink>
-                </SidebarMenuButton>
-              </SidebarMenuItem>
-
-              <SidebarMenuItem>
-                <SidebarMenuButton asChild>
-                  <NavLink to="/settings" className={({ isActive }) => cn(
-                    "flex items-center gap-3 px-3 py-2 rounded-md transition-colors",
-                    isActive ? "bg-sidebar-accent text-sidebar-accent-foreground" : "transparent hover:bg-sidebar-accent/50"
-                  )}>
-                    <Settings className="h-5 w-5" />
-                    <span>Settings</span>
                   </NavLink>
                 </SidebarMenuButton>
               </SidebarMenuItem>
@@ -204,6 +119,37 @@ export function Sidebar() {
                   )}>
                     <Bot className="h-5 w-5" />
                     <span>Nova AI</span>
+                  </NavLink>
+                </SidebarMenuButton>
+              </SidebarMenuItem>
+            </SidebarMenu>
+          </SidebarGroupContent>
+        </SidebarGroup>
+
+        <SidebarGroup>
+          <SidebarGroupLabel className="px-3 py-2">Profile</SidebarGroupLabel>
+          <SidebarGroupContent>
+            <SidebarMenu>
+              <SidebarMenuItem>
+                <SidebarMenuButton asChild>
+                  <NavLink to="/progress" className={({ isActive }) => cn(
+                    "flex items-center gap-3 px-3 py-2 rounded-md transition-colors",
+                    isActive ? "bg-sidebar-accent text-sidebar-accent-foreground" : "transparent hover:bg-sidebar-accent/50"
+                  )}>
+                    <Award className="h-5 w-5" />
+                    <span>Progress & XP</span>
+                  </NavLink>
+                </SidebarMenuButton>
+              </SidebarMenuItem>
+
+              <SidebarMenuItem>
+                <SidebarMenuButton asChild>
+                  <NavLink to="/settings" className={({ isActive }) => cn(
+                    "flex items-center gap-3 px-3 py-2 rounded-md transition-colors",
+                    isActive ? "bg-sidebar-accent text-sidebar-accent-foreground" : "transparent hover:bg-sidebar-accent/50"
+                  )}>
+                    <Settings className="h-5 w-5" />
+                    <span>Settings</span>
                   </NavLink>
                 </SidebarMenuButton>
               </SidebarMenuItem>
