@@ -1,15 +1,12 @@
-
 import React from "react";
 import { PageLayout } from "@/components/layout/PageLayout";
-
 const ProgressPage = () => {
-  return (
-    <PageLayout>
+  return <PageLayout>
       <h1 className="text-3xl font-bold mb-6">Your Progress</h1>
       
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
         <div className="bg-white rounded-lg shadow-md p-6">
-          <h2 className="text-xl font-semibold mb-4">Course Completion</h2>
+          <h2 className="text-xl font-semibold mb-4 text-gray-800">Course Completion</h2>
           <div className="space-y-4">
             <div>
               <div className="flex justify-between mb-1">
@@ -17,7 +14,9 @@ const ProgressPage = () => {
                 <span className="text-sm font-medium">75%</span>
               </div>
               <div className="w-full bg-gray-200 rounded-full h-2.5">
-                <div className="bg-blue-600 h-2.5 rounded-full" style={{ width: "75%" }}></div>
+                <div className="bg-blue-600 h-2.5 rounded-full" style={{
+                width: "75%"
+              }}></div>
               </div>
             </div>
             
@@ -27,7 +26,9 @@ const ProgressPage = () => {
                 <span className="text-sm font-medium">45%</span>
               </div>
               <div className="w-full bg-gray-200 rounded-full h-2.5">
-                <div className="bg-blue-600 h-2.5 rounded-full" style={{ width: "45%" }}></div>
+                <div className="bg-blue-600 h-2.5 rounded-full" style={{
+                width: "45%"
+              }}></div>
               </div>
             </div>
             
@@ -37,7 +38,9 @@ const ProgressPage = () => {
                 <span className="text-sm font-medium">20%</span>
               </div>
               <div className="w-full bg-gray-200 rounded-full h-2.5">
-                <div className="bg-blue-600 h-2.5 rounded-full" style={{ width: "20%" }}></div>
+                <div className="bg-blue-600 h-2.5 rounded-full" style={{
+                width: "20%"
+              }}></div>
               </div>
             </div>
           </div>
@@ -47,31 +50,45 @@ const ProgressPage = () => {
           <h2 className="text-xl font-semibold mb-4">Weekly Activity</h2>
           <div className="h-60 flex items-end space-x-2">
             <div className="flex-1 flex flex-col items-center">
-              <div className="bg-blue-200 w-full" style={{ height: "30%" }}></div>
+              <div className="bg-blue-200 w-full" style={{
+              height: "30%"
+            }}></div>
               <span className="text-xs mt-1">Mon</span>
             </div>
             <div className="flex-1 flex flex-col items-center">
-              <div className="bg-blue-400 w-full" style={{ height: "60%" }}></div>
+              <div className="bg-blue-400 w-full" style={{
+              height: "60%"
+            }}></div>
               <span className="text-xs mt-1">Tue</span>
             </div>
             <div className="flex-1 flex flex-col items-center">
-              <div className="bg-blue-600 w-full" style={{ height: "90%" }}></div>
+              <div className="bg-blue-600 w-full" style={{
+              height: "90%"
+            }}></div>
               <span className="text-xs mt-1">Wed</span>
             </div>
             <div className="flex-1 flex flex-col items-center">
-              <div className="bg-blue-400 w-full" style={{ height: "70%" }}></div>
+              <div className="bg-blue-400 w-full" style={{
+              height: "70%"
+            }}></div>
               <span className="text-xs mt-1">Thu</span>
             </div>
             <div className="flex-1 flex flex-col items-center">
-              <div className="bg-blue-300 w-full" style={{ height: "40%" }}></div>
+              <div className="bg-blue-300 w-full" style={{
+              height: "40%"
+            }}></div>
               <span className="text-xs mt-1">Fri</span>
             </div>
             <div className="flex-1 flex flex-col items-center">
-              <div className="bg-blue-200 w-full" style={{ height: "20%" }}></div>
+              <div className="bg-blue-200 w-full" style={{
+              height: "20%"
+            }}></div>
               <span className="text-xs mt-1">Sat</span>
             </div>
             <div className="flex-1 flex flex-col items-center">
-              <div className="bg-blue-100 w-full" style={{ height: "10%" }}></div>
+              <div className="bg-blue-100 w-full" style={{
+              height: "10%"
+            }}></div>
               <span className="text-xs mt-1">Sun</span>
             </div>
           </div>
@@ -118,8 +135,6 @@ const ProgressPage = () => {
           </div>
         </div>
       </div>
-    </PageLayout>
-  );
+    </PageLayout>;
 };
-
 export default ProgressPage;
