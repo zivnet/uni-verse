@@ -1,10 +1,7 @@
-
 import React from "react";
 import { PageLayout } from "@/components/layout/PageLayout";
-
 const NovaPage = () => {
-  return (
-    <PageLayout>
+  return <PageLayout>
       <h1 className="text-3xl font-bold mb-6">Nova AI Learning Assistant</h1>
       
       <div className="bg-white rounded-lg shadow-md p-6 mb-6">
@@ -27,19 +24,19 @@ const NovaPage = () => {
         <div className="border-t pt-4">
           <div className="flex mb-4">
             <div className="bg-gray-100 rounded-lg p-3 max-w-3xl">
-              <p>What's the difference between props and state in React?</p>
+              <p className="text-gray-600">What's the difference between props and state in React?</p>
             </div>
           </div>
           
           <div className="flex justify-end mb-4">
             <div className="bg-blue-100 rounded-lg p-3 max-w-3xl">
               <p>
-                <strong>Props vs State in React:</strong><br/>
+                <strong>Props vs State in React:</strong><br />
                 Props (short for "properties") are passed from parent components to child components. 
-                They are immutable within the child component and are used to configure a component.<br/><br/>
+                They are immutable within the child component and are used to configure a component.<br /><br />
                 
                 State represents data that can change over time. It's managed within a component and 
-                can be updated using setState(). When state changes, the component re-renders.<br/><br/>
+                can be updated using setState(). When state changes, the component re-renders.<br /><br />
                 
                 Key differences:
                 <ul className="list-disc pl-5 mt-2">
@@ -56,11 +53,7 @@ const NovaPage = () => {
         
         <div className="mt-4">
           <div className="relative">
-            <input 
-              type="text" 
-              placeholder="Ask Nova anything..." 
-              className="w-full border rounded-lg p-3 pr-12 focus:outline-none focus:ring-2 focus:ring-blue-500"
-            />
+            <input type="text" placeholder="Ask Nova anything..." className="w-full border rounded-lg p-3 pr-12 focus:outline-none focus:ring-2 focus:ring-blue-500" />
             <button className="absolute right-2 top-2 bg-blue-600 text-white p-1 rounded-lg">
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
@@ -82,8 +75,6 @@ const NovaPage = () => {
           What are TypeScript generics?
         </button>
       </div>
-    </PageLayout>
-  );
+    </PageLayout>;
 };
-
 export default NovaPage;
