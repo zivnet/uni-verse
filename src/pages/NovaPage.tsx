@@ -30,7 +30,7 @@ const NovaPage = () => {
           
           <div className="flex justify-end mb-4">
             <div className="bg-blue-100 rounded-lg p-3 max-w-3xl">
-              <p>
+              <p className="text-gray-600">
                 <strong>Props vs State in React:</strong><br />
                 Props (short for "properties") are passed from parent components to child components. 
                 They are immutable within the child component and are used to configure a component.<br /><br />
