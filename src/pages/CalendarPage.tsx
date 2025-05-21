@@ -1,13 +1,10 @@
-
 import React from "react";
 import { PageLayout } from "@/components/layout/PageLayout";
-
 const CalendarPage = () => {
-  return (
-    <PageLayout>
+  return <PageLayout>
       <h1 className="text-3xl font-bold mb-6">Calendar</h1>
       
-      <div className="bg-white rounded-lg shadow-md p-6">
+      <div className="rounded-lg shadow-md p-6 bg-zinc-950">
         <div className="grid grid-cols-7 gap-2 mb-2 text-center font-medium">
           <div>Sun</div>
           <div>Mon</div>
@@ -53,8 +50,6 @@ const CalendarPage = () => {
           <div className="h-24 p-2 border">18</div>
         </div>
       </div>
-    </PageLayout>
-  );
+    </PageLayout>;
 };
-
 export default CalendarPage;
