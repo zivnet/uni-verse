@@ -38,7 +38,7 @@ const ForumPage = () => {
         
         <div className="border-b p-4 hover:bg-gray-50 transition-colors">
           <div className="flex justify-between items-start mb-2">
-            <h3 className="text-lg font-medium">TypeScript type inference not working</h3>
+            <h3 className="text-lg font-medium text-gray-800">TypeScript type inference not working</h3>
             <span className="bg-yellow-100 text-yellow-800 text-xs px-2 py-1 rounded-full">Open</span>
           </div>
           <p className="text-gray-600 text-sm mb-3">I'm having issues with TypeScript not correctly inferring types from my API responses...</p>
