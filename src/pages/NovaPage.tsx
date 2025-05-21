@@ -68,7 +68,7 @@ const NovaPage = () => {
         <button className="bg-white p-3 rounded-lg shadow hover:shadow-md transition-shadow text-gray-800 text-center">
           Explain closures in JavaScript
         </button>
-        <button className="bg-white p-3 rounded-lg shadow text-left hover:shadow-md transition-shadow">
+        <button className="bg-white p-3 rounded-lg shadow hover:shadow-md transition-shadow text-center text-gray-800">
           How does React's virtual DOM work?
         </button>
         <button className="bg-white p-3 rounded-lg shadow text-left hover:shadow-md transition-shadow">
