@@ -1,9 +1,10 @@
 
 import React from "react";
+import { PageLayout } from "@/components/layout/PageLayout";
 
 const ForumPage = () => {
   return (
-    <div className="container mx-auto p-6">
+    <PageLayout>
       <h1 className="text-3xl font-bold mb-6">Forum</h1>
       
       <div className="flex justify-between mb-6">
@@ -60,7 +61,7 @@ const ForumPage = () => {
           </div>
         </div>
       </div>
-    </div>
+    </PageLayout>
   );
 };
 
