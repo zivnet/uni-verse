@@ -65,7 +65,7 @@ const NovaPage = () => {
       
       <h2 className="text-2xl font-bold mb-4">Suggested Questions</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-        <button className="bg-white p-3 rounded-lg shadow text-left hover:shadow-md transition-shadow">
+        <button className="bg-white p-3 rounded-lg shadow text-left hover:shadow-md transition-shadow text-gray-800">
           Explain closures in JavaScript
         </button>
         <button className="bg-white p-3 rounded-lg shadow text-left hover:shadow-md transition-shadow">
