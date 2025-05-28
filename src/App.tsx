@@ -14,6 +14,7 @@ import ExplorePage from "./pages/ExplorePage";
 import NovaPage from "./pages/NovaPage";
 import ProgressPage from "./pages/ProgressPage";
 import SettingsPage from "./pages/SettingsPage";
+import AuthPage from "./pages/AuthPage";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -26,6 +27,7 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
+          <Route path="/auth" element={<AuthPage />} />
           <Route path="/courses/*" element={<CoursesPage />} />
           <Route path="/calendar" element={<CalendarPage />} />
           <Route path="/forum" element={<ForumPage />} />
