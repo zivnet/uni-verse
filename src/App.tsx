@@ -16,6 +16,7 @@ import NovaPage from "./pages/NovaPage";
 import ProgressPage from "./pages/ProgressPage";
 import SettingsPage from "./pages/SettingsPage";
 import AuthPage from "./pages/AuthPage";
+import AssignmentPage from "./pages/AssignmentPage";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -31,6 +32,7 @@ const App = () => (
             <Route path="/" element={<Index />} />
             <Route path="/auth" element={<AuthPage />} />
             <Route path="/courses/*" element={<CoursesPage />} />
+            <Route path="/assignments" element={<AssignmentPage />} />
             <Route path="/calendar" element={<CalendarPage />} />
             <Route path="/forum" element={<ForumPage />} />
             <Route path="/explore" element={<ExplorePage />} />

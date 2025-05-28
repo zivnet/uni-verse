@@ -10,7 +10,8 @@ import {
   Bot,
   Search,
   Settings,
-  Award
+  Award,
+  FileText
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 
@@ -71,6 +72,18 @@ export function Sidebar() {
                   )}>
                     <BookOpen className="h-5 w-5" />
                     <span>My Courses</span>
+                  </NavLink>
+                </SidebarMenuButton>
+              </SidebarMenuItem>
+
+              <SidebarMenuItem>
+                <SidebarMenuButton asChild>
+                  <NavLink to="/assignments" className={({ isActive }) => cn(
+                    "flex items-center gap-3 px-3 py-2 rounded-md transition-colors",
+                    isActive ? "bg-sidebar-accent text-sidebar-accent-foreground" : "transparent hover:bg-sidebar-accent/50"
+                  )}>
+                    <FileText className="h-5 w-5" />
+                    <span>Assignments</span>
                   </NavLink>
                 </SidebarMenuButton>
               </SidebarMenuItem>
