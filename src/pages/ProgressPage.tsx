@@ -6,12 +6,12 @@ const ProgressPage = () => {
       
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
         <div className="bg-white rounded-lg shadow-md p-6">
-          <h2 className="text-xl font-semibold mb-4 text-gray-800">Course Completion</h2>
+          <h2 className="text-xl font-semibold mb-4 text-gray-900">Course Completion</h2>
           <div className="space-y-4">
             <div>
               <div className="flex justify-between mb-1">
-                <span className="text-sm font-medium text-gray-600">Introduction to React</span>
-                <span className="text-sm font-medium">75%</span>
+                <span className="text-sm font-medium text-gray-900">Introduction to React</span>
+                <span className="text-sm font-medium text-gray-900">75%</span>
               </div>
               <div className="w-full bg-gray-200 rounded-full h-2.5">
                 <div className="bg-blue-600 h-2.5 rounded-full" style={{
@@ -22,8 +22,8 @@ const ProgressPage = () => {
             
             <div>
               <div className="flex justify-between mb-1">
-                <span className="text-sm font-medium">Advanced JavaScript</span>
-                <span className="text-sm font-medium">45%</span>
+                <span className="text-sm font-medium text-gray-900">Advanced JavaScript</span>
+                <span className="text-sm font-medium text-gray-900">45%</span>
               </div>
               <div className="w-full bg-gray-200 rounded-full h-2.5">
                 <div className="bg-blue-600 h-2.5 rounded-full" style={{
@@ -34,8 +34,8 @@ const ProgressPage = () => {
             
             <div>
               <div className="flex justify-between mb-1">
-                <span className="text-sm font-medium">TypeScript Essentials</span>
-                <span className="text-sm font-medium">20%</span>
+                <span className="text-sm font-medium text-gray-900">TypeScript Essentials</span>
+                <span className="text-sm font-medium text-gray-900">20%</span>
               </div>
               <div className="w-full bg-gray-200 rounded-full h-2.5">
                 <div className="bg-blue-600 h-2.5 rounded-full" style={{
@@ -47,56 +47,56 @@ const ProgressPage = () => {
         </div>
         
         <div className="bg-white rounded-lg shadow-md p-6">
-          <h2 className="text-xl font-semibold mb-4">Weekly Activity</h2>
+          <h2 className="text-xl font-semibold mb-4 text-gray-900">Weekly Activity</h2>
           <div className="h-60 flex items-end space-x-2">
             <div className="flex-1 flex flex-col items-center">
               <div className="bg-blue-200 w-full" style={{
               height: "30%"
             }}></div>
-              <span className="text-xs mt-1">Mon</span>
+              <span className="text-xs mt-1 text-gray-900">Mon</span>
             </div>
             <div className="flex-1 flex flex-col items-center">
               <div className="bg-blue-400 w-full" style={{
               height: "60%"
             }}></div>
-              <span className="text-xs mt-1">Tue</span>
+              <span className="text-xs mt-1 text-gray-900">Tue</span>
             </div>
             <div className="flex-1 flex flex-col items-center">
               <div className="bg-blue-600 w-full" style={{
               height: "90%"
             }}></div>
-              <span className="text-xs mt-1">Wed</span>
+              <span className="text-xs mt-1 text-gray-900">Wed</span>
             </div>
             <div className="flex-1 flex flex-col items-center">
               <div className="bg-blue-400 w-full" style={{
               height: "70%"
             }}></div>
-              <span className="text-xs mt-1">Thu</span>
+              <span className="text-xs mt-1 text-gray-900">Thu</span>
             </div>
             <div className="flex-1 flex flex-col items-center">
               <div className="bg-blue-300 w-full" style={{
               height: "40%"
             }}></div>
-              <span className="text-xs mt-1">Fri</span>
+              <span className="text-xs mt-1 text-gray-900">Fri</span>
             </div>
             <div className="flex-1 flex flex-col items-center">
               <div className="bg-blue-200 w-full" style={{
               height: "20%"
             }}></div>
-              <span className="text-xs mt-1">Sat</span>
+              <span className="text-xs mt-1 text-gray-900">Sat</span>
             </div>
             <div className="flex-1 flex flex-col items-center">
               <div className="bg-blue-100 w-full" style={{
               height: "10%"
             }}></div>
-              <span className="text-xs mt-1">Sun</span>
+              <span className="text-xs mt-1 text-gray-900">Sun</span>
             </div>
           </div>
         </div>
       </div>
       
       <div className="bg-white rounded-lg shadow-md p-6">
-        <h2 className="text-xl font-semibold mb-4">Recent Activities</h2>
+        <h2 className="text-xl font-semibold mb-4 text-gray-900">Recent Activities</h2>
         <div className="space-y-4">
           <div className="flex items-start pb-4 border-b">
             <div className="bg-green-100 p-2 rounded-full mr-4">
@@ -105,8 +105,8 @@ const ProgressPage = () => {
               </svg>
             </div>
             <div>
-              <h3 className="font-medium">Completed Lesson: React Hooks Introduction</h3>
-              <p className="text-sm text-gray-600">2 hours ago</p>
+              <h3 className="font-medium text-gray-900">Completed Lesson: React Hooks Introduction</h3>
+              <p className="text-sm text-gray-700">2 hours ago</p>
             </div>
           </div>
           
@@ -117,8 +117,8 @@ const ProgressPage = () => {
               </svg>
             </div>
             <div>
-              <h3 className="font-medium">Watched Video: Understanding Closures</h3>
-              <p className="text-sm text-gray-600">Yesterday</p>
+              <h3 className="font-medium text-gray-900">Watched Video: Understanding Closures</h3>
+              <p className="text-sm text-gray-700">Yesterday</p>
             </div>
           </div>
           
@@ -129,8 +129,8 @@ const ProgressPage = () => {
               </svg>
             </div>
             <div>
-              <h3 className="font-medium">Submitted Quiz: JavaScript Fundamentals</h3>
-              <p className="text-sm text-gray-600">2 days ago</p>
+              <h3 className="font-medium text-gray-900">Submitted Quiz: JavaScript Fundamentals</h3>
+              <p className="text-sm text-gray-700">2 days ago</p>
             </div>
           </div>
         </div>
