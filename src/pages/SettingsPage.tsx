@@ -19,7 +19,7 @@ const SettingsPage = () => {
               <input
                 type="text"
                 id="name"
-                className="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-900 bg-white"
                 defaultValue="Alex Johnson"
               />
             </div>
@@ -31,7 +31,7 @@ const SettingsPage = () => {
               <input
                 type="email"
                 id="email"
-                className="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-900 bg-white"
                 defaultValue="alex@example.com"
               />
             </div>
@@ -42,7 +42,7 @@ const SettingsPage = () => {
               </label>
               <select
                 id="timezone"
-                className="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-900 bg-white"
                 defaultValue="America/New_York"
               >
                 <option value="America/New_York">Eastern Time (ET)</option>
@@ -116,7 +116,7 @@ const SettingsPage = () => {
               </label>
               <select
                 id="theme"
-                className="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-900 bg-white"
                 defaultValue="system"
               >
                 <option value="light">Light</option>
@@ -144,7 +144,7 @@ const SettingsPage = () => {
       </div>
       
       <div className="mt-6 flex justify-end">
-        <button className="bg-gray-100 text-gray-700 px-4 py-2 rounded-md mr-2 hover:bg-gray-200 transition-colors">
+        <button className="bg-gray-100 text-gray-900 px-4 py-2 rounded-md mr-2 hover:bg-gray-200 transition-colors">
           Cancel
         </button>
         <button className="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors">
