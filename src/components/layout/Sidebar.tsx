@@ -11,7 +11,8 @@ import {
   Search,
   Settings,
   Award,
-  FileText
+  FileText,
+  Headphones
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 
@@ -84,6 +85,18 @@ export function Sidebar() {
                   )}>
                     <FileText className="h-5 w-5" />
                     <span>Assignments</span>
+                  </NavLink>
+                </SidebarMenuButton>
+              </SidebarMenuItem>
+
+              <SidebarMenuItem>
+                <SidebarMenuButton asChild>
+                  <NavLink to="/recordings" className={({ isActive }) => cn(
+                    "flex items-center gap-3 px-3 py-2 rounded-md transition-colors",
+                    isActive ? "bg-sidebar-accent text-sidebar-accent-foreground" : "transparent hover:bg-sidebar-accent/50"
+                  )}>
+                    <Headphones className="h-5 w-5" />
+                    <span>Recordings & Podcasts</span>
                   </NavLink>
                 </SidebarMenuButton>
               </SidebarMenuItem>
