@@ -9,11 +9,11 @@ const SettingsPage = () => {
       
       <div className="bg-white rounded-lg shadow-md overflow-hidden">
         <div className="p-6 border-b">
-          <h2 className="text-xl font-semibold mb-4">Account Settings</h2>
+          <h2 className="text-xl font-semibold mb-4 text-gray-900">Account Settings</h2>
           
           <div className="space-y-4">
             <div>
-              <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
+              <label htmlFor="name" className="block text-sm font-medium text-gray-900 mb-1">
                 Full Name
               </label>
               <input
@@ -25,7 +25,7 @@ const SettingsPage = () => {
             </div>
             
             <div>
-              <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
+              <label htmlFor="email" className="block text-sm font-medium text-gray-900 mb-1">
                 Email Address
               </label>
               <input
@@ -37,7 +37,7 @@ const SettingsPage = () => {
             </div>
             
             <div>
-              <label htmlFor="timezone" className="block text-sm font-medium text-gray-700 mb-1">
+              <label htmlFor="timezone" className="block text-sm font-medium text-gray-900 mb-1">
                 Timezone
               </label>
               <select
@@ -56,13 +56,13 @@ const SettingsPage = () => {
         </div>
         
         <div className="p-6 border-b">
-          <h2 className="text-xl font-semibold mb-4">Notification Preferences</h2>
+          <h2 className="text-xl font-semibold mb-4 text-gray-900">Notification Preferences</h2>
           
           <div className="space-y-4">
             <div className="flex items-center justify-between">
               <div>
-                <h3 className="font-medium">Course Updates</h3>
-                <p className="text-sm text-gray-600">Get notified about new content in your enrolled courses.</p>
+                <h3 className="font-medium text-gray-900">Course Updates</h3>
+                <p className="text-sm text-gray-700">Get notified about new content in your enrolled courses.</p>
               </div>
               <div className="flex items-center h-6">
                 <input
@@ -76,8 +76,8 @@ const SettingsPage = () => {
             
             <div className="flex items-center justify-between">
               <div>
-                <h3 className="font-medium">Forum Replies</h3>
-                <p className="text-sm text-gray-600">Receive notifications when someone replies to your posts.</p>
+                <h3 className="font-medium text-gray-900">Forum Replies</h3>
+                <p className="text-sm text-gray-700">Receive notifications when someone replies to your posts.</p>
               </div>
               <div className="flex items-center h-6">
                 <input
@@ -91,8 +91,8 @@ const SettingsPage = () => {
             
             <div className="flex items-center justify-between">
               <div>
-                <h3 className="font-medium">Marketing Emails</h3>
-                <p className="text-sm text-gray-600">Receive emails about new courses and special offers.</p>
+                <h3 className="font-medium text-gray-900">Marketing Emails</h3>
+                <p className="text-sm text-gray-700">Receive emails about new courses and special offers.</p>
               </div>
               <div className="flex items-center h-6">
                 <input
@@ -107,11 +107,11 @@ const SettingsPage = () => {
         </div>
         
         <div className="p-6">
-          <h2 className="text-xl font-semibold mb-4">Display Settings</h2>
+          <h2 className="text-xl font-semibold mb-4 text-gray-900">Display Settings</h2>
           
           <div className="space-y-4">
             <div>
-              <label htmlFor="theme" className="block text-sm font-medium text-gray-700 mb-1">
+              <label htmlFor="theme" className="block text-sm font-medium text-gray-900 mb-1">
                 Theme
               </label>
               <select
@@ -127,8 +127,8 @@ const SettingsPage = () => {
             
             <div className="flex items-center justify-between">
               <div>
-                <h3 className="font-medium">Reduce Motion</h3>
-                <p className="text-sm text-gray-600">Minimize animations throughout the interface.</p>
+                <h3 className="font-medium text-gray-900">Reduce Motion</h3>
+                <p className="text-sm text-gray-700">Minimize animations throughout the interface.</p>
               </div>
               <div className="flex items-center h-6">
                 <input
